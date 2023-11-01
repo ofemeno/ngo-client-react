@@ -1,115 +1,244 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@400;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  color: #292829;
-}
-main,
-section {
+main {
   width: 100%;
-  font-family: "Oswald", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px;
+  gap: 40px;
+  /* border-bottom: 1px solid #222; */
+}
+
+a {
+  text-decoration: none;
+  color: #222;
 }
 
 img {
   max-width: 100%;
-  height: 100vh;
 }
 
-a {
-  color: #292829;
+h2 {
+  font-size: 30px;
 }
-
-main p {
-  font-family: "Lato", sans-serif;
-  font-size: 18px;
-}
-header {
-  display: flex;
-  padding: 30px 20px;
-  border-bottom: 2px solid #eee;
-}
-
 header a.logo {
-  text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: teal;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header nav a {
+  font-size: 16px;
+  color: #b2b2b2;
+}
+header nav a:hover {
+  color: teal;
+}
+
+header nav a.nav-btn {
+  font-size: 16px;
+  background-color: #da291c;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 0;
+}
+header nav a.nav-btn:hover {
+  background-color: teal;
+}
+
+main div.hero {
+  width: 100%;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+main div.hero div.text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* border: 1px solid white; */
+  gap: 10px;
+}
+div.hero div.text div.cp-col {
+  position: relative;
+  width: 100%;
+  padding: 40px 30px;
+  width: 400px;
+}
+div.hero div.text div.cp-col span {
+  text-transform: uppercase;
+  position: absolute;
+  background-color: #222;
+  padding: 5px 10px;
+  color: #fff;
+  top: -10px;
+}
+
+div.hero div.text div.cp-col p {
+  font-size: 40px;
   font-weight: bold;
 }
 
-section.donation-box {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 10px;
+div.hero div.cp-col a {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: normal;
 }
 
-section.donation-box div.left-box {
+div.hero div.text div.caption {
+  display: block;
+  background-color: #fff;
+}
+
+div.hero div.text div.cp-col a {
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+/* help the children section */
+div.help-section {
+  padding: 40px 60px;
+  display: block;
+  border-bottom: #eee 1px solid;
+}
+
+div.help-section h2 {
+  text-align: center;
+  padding: 40px;
+}
+
+div.help-section div.post-row {
+  position: relative;
+  margin-top: 50px;
   padding: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "side side top"
+    "side side bottom";
+  margin-inline: auto;
 }
 
-section.donation-box div.left-box h1 {
-  font-size: 36px;
-  color: #222221;
-  font-family: oswald_medium, sans-serif;
-  font-size: 31px;
-  font-weight: 700;
-  letter-spacing: 0;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin: 25px 0 20px;
+div.help-section div.widget img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div.help-section div.widget {
+  position: relative;
+}
+div.help-section div.widget p {
+  position: absolute;
+  top: 30px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #da291c;
+  font-size: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   text-transform: uppercase;
 }
 
-section.donation-box div.left-box p {
-  padding-top: 25px;
-  line-height: 30px;
-  word-spacing: 5px;
+div.help-section div.widget p svg {
+  color: #da291c;
+  height: 20px;
 }
 
-div.payment-section {
-  display: block;
-}
-div.payment-section div.personal-info {
-  display: none;
+.side {
+  grid-area: side;
 }
 
-div.payment-section div.amount-section {
-  margin-top: 30px;
+.top {
+  grid-area: top;
 }
-div.payment-section div.amount-section p {
-  font-weight: bold;
-}
-
-div.payment-section div.amount-section div.frequency {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  gap: 40px;
+.bottom {
+  grid-area: bottom;
 }
 
-div.amount-section div.frequency a {
-  text-decoration: none;
+div.help-section div.widget:hover {
+  border: 2px solid #da291c;
+  cursor: pointer;
+}
+/* what we do section */
+
+div.wwd {
   padding: 10px 30px;
-  border: 2px solid #222221;
-  border-radius: 20px;
-  color: #222221;
-}
-
-div.gift-section {
-  padding: 20px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 40px;
+  flex-direction: column;
 }
 
-div.gift-select input {
-  width: 80%;
-  max-width: 300px;
-  padding: 15px 10px;
+div.wwd h2 {
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+div.wwd p {
+  text-align: center;
+  max-width: 600px;
   font-size: 20px;
+  margin-bottom: 50px;
+}
+
+div.wwd div.links ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+div.wwd div.links ul li {
+  display: flex;
+  list-style: none;
+}
+
+div.wwd div.links ul a {
+  text-decoration: none;
+}
+div.wwd div.links ul a div {
+  object-fit: cover;
+  max-width: 240px;
+}
+
+div.wwd div.links ul img {
+  border-radius: 50%;
   margin-bottom: 20px;
+}
+div.wwd div.links ul img:hover {
+  border: 3px solid #da291c;
+}
+
+div.wwd div.links ul a p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.wwd div.links ul a svg {
+  width: 20px;
+  margin-left: 10px;
+  color: #da291c;
 }
