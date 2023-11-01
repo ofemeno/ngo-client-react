@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-export default function DonateWidget({ text, gridArea, imageLink }) {
+export default function DonateWidget({ text, gridArea, imageLink, link }) {
   return (
-    <Link className={`${gridArea}`} >
+    <Link to={`${link}`} className={gridArea}>
       <div className={`widget`}>
         <img src={imageLink} alt="" />
         <p>

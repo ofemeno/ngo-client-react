@@ -12,8 +12,8 @@ export default function Hero() {
         <div className="cp-col caption">
           <span className="issue">the issue</span>
           <p className="heading">
-            Climate change poses the biggest threat to women and children in developing
-            nations
+            Climate change poses the biggest threat to women and children in
+            developing nations
           </p>
           <Link to="">Read more about this environmental and social cause</Link>
         </div>
