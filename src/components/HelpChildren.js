@@ -12,7 +12,7 @@ export default function HelpChildren() {
         />
 
         <DonateWidget
-          text={`Global food crises`}
+          text={`food crises`}
           gridArea={`bottom`}
           imageLink={`https://www.savethechildren.org.uk/content/dam/global/images/countries/somalia/ubah-somalia-ch1696362-orig.jpg/jcr:content/renditions/cq5dam.webp_thumbnail.768.768.webp`}
           link={'/donate'}

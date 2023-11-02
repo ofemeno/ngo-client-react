@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@400;700&family=Poppins:wght@400;500;600;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 main {
@@ -27,8 +30,9 @@ img {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 20px;
 }
+
 header a.logo {
   font-size: 20px;
   font-weight: bold;
@@ -92,7 +96,7 @@ div.hero div.text div.cp-col span {
 }
 
 div.hero div.text div.cp-col p {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -108,7 +112,7 @@ div.hero div.text div.caption {
 }
 
 div.hero div.text div.cp-col a {
-  font-size: 13px;
+  font-size: 12px;
   text-decoration: underline;
 }
 
@@ -243,10 +247,19 @@ div.wwd div.links ul a svg {
   color: #da291c;
 }
 
+/* donation page */
+
 div.donation-page {
   width: 100%;
-  height: 100vh;
-  background-color: teal;
+}
+
+div.donation-page h2 {
+  font-size: 1.3rem;
+}
+
+div.donation-page a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 div.donation-page div.row {
@@ -258,22 +271,33 @@ div.donation-page div.row {
   flex-basis: 1;
   gap: 10px;
   height: 100%;
-  padding: 60px 0;
+  padding: 10px 0;
 }
+
 div.donation-page div.row div.col {
   border: #b2b2b2 1px solid;
   width: 100%;
   height: 100%;
   position: relative;
-  padding: 50px 30px;
+  padding: 20px 30px;
   color: #fff;
 }
 
 div.donation-page div.row div.col:nth-child(1) {
-  background-color: #354463;
-  
+  background-color: rgb(229, 85, 75);
+  border: 0;
 }
 
+div.donation-page div.row div.col:nth-child(2) {
+  /* background-color: #505f7d49; */
+  border: none;
+  font-size: 3em;
+  display: flex;
+  position: relative;
+  font-weight: bold;
+  letter-spacing: 7px;
+  font-family: "Poppins", sans-serif;
+}
 
 div.form-container {
   position: relative;
@@ -282,13 +306,91 @@ div.form-container {
   height: 100%;
 }
 div.form-container div.action-box {
-  position: absolute;
-  bottom: 30px;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
+div.options,
+div.frequency {
+  position: relative;
+  border: #fff solid 1px;
+  background-color: #fff;
+  height: auto;
+}
+
+div.options label:not(:last-child){
+  border-bottom: rgb(229, 85, 75) 1px solid;
+}
+
+div.frequency label:not(:last-child) {
+  border-right: rgb(229, 85, 75) 1px solid;
+}
+
+div.frequency {
+  display: flex;
+}
+/* input */
+
+input[type="text"] {
+  /* display: none; */
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* radio bottons */
+
+input[type="radio"] {
+  display: none;
+}
+input:focus {
+  outline: none;
+}
+
+div.form-container label {
+  position: relative;
+  color: rgb(229, 85, 75);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+div.form-container label::before {
+  content: "";
+  height: 0.7rem;
+  width: 0.7rem;
+  border: rgb(229, 85, 75) 3px solid;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+div.form-container input[type="radio"]:checked + label::before {
+  height: 0.7rem;
+  width: 0.7rem;
+  border: 0.3rem solid #fff;
+  background-color: rgb(229, 85, 75);
+}
+
+div.form-container input[type="radio"]:checked + label {
+  background-color: rgb(229, 85, 75);
+  color: #fff;
+}
+
+div.form-container div.action-box a:nth-child(2) {
+  padding: 10px 20px;
+  background-color: #fff;
+  text-decoration: none;
+  color: rgb(229, 85, 75);
+  border-radius: 20px;
+  border: 0;
+  font-weight: bold;
+}
 
 /* not found page */
 div.not-found {
@@ -302,4 +404,3 @@ div.not-found {
 .footer {
   width: 100%;
 }
-
