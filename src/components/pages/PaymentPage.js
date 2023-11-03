@@ -8,14 +8,14 @@ export default function PaymentPage(props) {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/config").then(async (r) => {
+    fetch("https://ngo-server.onrender.com/config").then(async (r) => {
       const { publishAbleKey } = await r.json();
       console.log(publishAbleKey);
       setStripePromise(loadStripe(publishAbleKey));
     });
   }, []);
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://ngo-server.onrender.com/create-payment-intent", {
       method: "POST",
       body: JSON.stringify({}),
     }).then(async (r) => {
