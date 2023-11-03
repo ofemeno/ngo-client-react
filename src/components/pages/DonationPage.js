@@ -16,8 +16,8 @@ export default function DonationPage() {
 
   function handleCheckout(e) {
     e.preventDefault();
-    if(!donation || !name || !email ){
-        return;
+    if (!donation || !name || !email) {
+      return;
     }
     setShowCheckout(true);
   }
@@ -30,8 +30,8 @@ export default function DonationPage() {
       setDonation("");
     }
   }
-  function handleFrequency(e){
-    e.target.preventDefault()
+  function handleFrequency(e) {
+    e.target.preventDefault();
   }
   function handleNameInput(e) {
     e.preventDefault();

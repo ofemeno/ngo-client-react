@@ -13,11 +13,11 @@ main {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 30px 40px;
+  padding: 30px 50px;
+  /* max-width: 700px; */
   gap: 40px;
-  /* border-bottom: 1px solid #222; */
 }
 
 a {
@@ -37,6 +37,8 @@ header a.logo {
   font-size: 20px;
   font-weight: bold;
   color: teal;
+  display: flex;
+  flex-direction: column;
 }
 
 header nav {
@@ -320,7 +322,7 @@ div.frequency {
   height: auto;
 }
 
-div.options label:not(:last-child){
+div.options label:not(:last-child) {
   border-bottom: rgb(229, 85, 75) 1px solid;
 }
 
@@ -392,6 +394,35 @@ div.form-container div.action-box a:nth-child(2) {
   font-weight: bold;
 }
 
+/* checkout page */
+
+div.checkout {
+  padding-top: 20px;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+}
+
+div.checkout div.payment-card {
+  padding: 20px;
+  max-width: 500px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+div.checkout a {
+  margin-top: 20px;
+  background-color: #da291c;
+  padding: 10px 20px;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
 /* not found page */
 div.not-found {
   display: block;
@@ -403,4 +434,15 @@ div.not-found {
 /* footer */
 .footer {
   width: 100%;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

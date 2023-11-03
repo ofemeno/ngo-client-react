@@ -4,12 +4,11 @@ export default function Header() {
   return (
     <header>
     <Link to="" className="logo">
-      The Mother & Child Initiative
+      <span>Mother &</span>
+      <span>Child Initiative</span>
     </Link>
     <nav>
       <Link to="">About us</Link>
-      <Link to="">Our stories</Link>
-      <Link to="">News and Events</Link>
       <Link to="" className="nav-btn">
         Donate Today
       </Link>
